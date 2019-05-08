@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp1.Views.EditDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="EditDialog" Height="251.279" Width="449.38">
+    <Grid Margin="0,0,312.5,212.5">
+        <Grid HorizontalAlignment="Left" Height="155" Margin="5,10,-305,-165" VerticalAlignment="Top" Width="430">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Title" Grid.Row="1" Grid.Column="1"/>
+            <Label Content="Author" Grid.Row="3" Grid.Column="1"/>
+            <Label Content="Year" Grid.Row="5" Grid.Column="1"/>
+
+            <TextBox Grid.Row="1" Grid.Column="2"  Text="{Binding TitleValue}" Name="TitleEdit" Margin="0,10,0,0" FontSize="18"/>
+            <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding AuthorValue}" Name="AuthorEdit" Margin="0,10,0,0" FontSize="18"/>
+            <TextBox Grid.Row="5" Grid.Column="2" Text="{Binding YearValue}" Name="YearEdit" Height="32" VerticalAlignment="Bottom" FontSize="18"/>
+
+        </Grid>
+        <Grid Height="40" Margin="5,170,-305,-210" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Save" IsDefault="True" IsCancel="False" Grid.Row="1" Grid.Column="1" Click="saveHandler"/>
+            <Button Content="Cancel" IsCancel ="True" Grid.Row="1" Grid.Column="3" Click="closeHandler"/>
+        </Grid>
+
+    </Grid>
+</Window>
